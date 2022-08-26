@@ -8,8 +8,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'OpenZiti',
   tagline: 'OpenZiti Tagline',
-  url: 'https://your-docusaurus-test-site.com',
-  baseUrl: '/',
+  url: 'https://openziti.io',
+  baseUrl: '/ziti/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
@@ -56,18 +56,43 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      announcementBar: {
+        content:
+            '⭐️If you like OpenZiti, help spread the word by giving it a star on <a target="_blank" rel="noopener noreferrer" href="https://github.com/openziti/ziti">GitHub</a>! ⭐️',
+        isCloseable: false,
+        id: 'github-stars'
+      },
       navbar: {
         title: '',
         logo: {
           alt: 'OpenZiti',
-          src: 'img/ziti-logo-40.png',
+          src: 'img/ziti-logo-dark.svg',
+          height: "100px",
         },
         items: [
+          {
+            type: 'doc',
+            docId: 'quickstarts/network/quickstartOverview',
+            position: 'left',
+            label: 'Get Started',
+          },
           {
             type: 'doc',
             docId: 'overview',
             position: 'left',
             label: 'Docs',
+          },
+          {
+            type: 'doc',
+            docId: 'api',
+            position: 'left',
+            label: 'API Documentation',
+          },
+          {
+            type: 'doc',
+            docId: 'glossary/glossary',
+            position: 'left',
+            label: 'Glossary',
           },
           {to: '/blog', label: 'Blog', position: 'right'},
           {

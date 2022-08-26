@@ -11,7 +11,7 @@ All identities need to be enrolled with the Ziti Controller so the Ziti Controll
 This process is slightly different for each type of identity and is complex. The easiest way to enroll an identity is to 
 use either the Ziti Desktop Edge/Ziti Mobile Edge for your operating system. Alternatively, you may perform the enrollment separate with the `ziti` CLI:
 
-[!include[](../downloads/ziti-cli.md)]
+[!include[](../../src/pages/downloads/ziti-cli.md)]
 
 ### One Time Token Enrollment - Internal PKI
 

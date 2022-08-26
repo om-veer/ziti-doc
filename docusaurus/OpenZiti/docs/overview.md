@@ -23,7 +23,7 @@ Ziti represents the next generation of secure, open-source networking for your a
 **Developer Focus**
 * [Open source code, available with the Apache 2.0 license](https://github.com/openziti)
 * Fully programable REST management APIs
-* [SDKs for a variety of programming languages](ziti/clients/sdks.md)
+* [SDKs for a variety of programming languages](../src/pages/ziti/clients/sdks.md)
 * [Application specific configuration store allowing centralized management of configuration allowing you to add structured configuration specific to your application](config-store/overview.md)
 * An extensible fabric, allowing you to add your own 
     * load balancing algorithms
@@ -33,9 +33,9 @@ Ziti represents the next generation of secure, open-source networking for your a
     * control and management plane messaging and semantics   
 
 **Easy Management**
-* [A flexible and expressive policy model for managing access to services and edge routers](ziti/policies/overview.md)
+* [A flexible and expressive policy model for managing access to services and edge routers](../src/pages/ziti/policies/overview.md)
 * A web based admin console
-* [Pre-built tunnelers and proxies for a variety of operating systems, including mobile](ziti/clients/tunneler.md)
+* [Pre-built tunnelers and proxies for a variety of operating systems, including mobile](../src/pages/ziti/clients/tunneler.md)
 
 Let's break some of these buzzwords down.
 
@@ -73,7 +73,7 @@ End-to-end encryption means that even if systems between the client and server a
 ## Getting started with Ziti
 
 If you are looking to jump right in feet first you can follow along with one of our [up-and-running quickstart
-guides](ziti/quickstarts/quickstart-overview.md). The quickstart will leverage Amazon Web Services (AWS) and will have you
+guides](../src/pages/ziti/quickstarts/quickstart-overview.md). The quickstart will leverage Amazon Web Services (AWS) and will have you
 launch an AMI which will get you up and running in no time.
 
 This environment is perfect for evaluators to get to know Ziti and the capabilities it offers.  The environement was not
