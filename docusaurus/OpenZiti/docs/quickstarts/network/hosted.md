@@ -1,7 +1,7 @@
 ---
 sidebar_position: 10
 ---
-# Host OpenZiti Anywhere
+# Host OpenZiti Anywheredd
 
 You can absolutely choose to host your [OpenZiti Network](../../overview#overview-of-a-ziti-network) anywhere you like.
 It is not necessary for the server to be on the open internet. If it works better for you to deploy OpenZiti on your
@@ -164,4 +164,4 @@ the installation guide](../zac/installation)
 ## Using the Overlay
 
 Now you have your zero trust overlay network in place, you probably want to try it out. Head on over to
-[the services quickstart](../services/index) and start the journey to understanding how to use OpenZiti.
+[the services quickstart](../services) and start the journey to understanding how to use OpenZiti.

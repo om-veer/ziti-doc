@@ -11,7 +11,7 @@ All identities need to be enrolled with the Ziti Controller so the Ziti Controll
 This process is slightly different for each type of identity and is complex. The easiest way to enroll an identity is to 
 use either the Ziti Desktop Edge/Ziti Mobile Edge for your operating system. Alternatively, you may perform the enrollment separate with the `ziti` CLI:
 
-[!include[](../../src/pages/downloads/ziti-cli.md)]
+[!include[](../../src/pages/downloads/ziti-cli)]
 
 ### One Time Token Enrollment - Internal PKI
 
@@ -21,7 +21,7 @@ and a certificate signing request for the Ziti Controller's built-in certificate
 
 Follow these steps to enroll an identity with a one-time token:
 
-* [create the Identity](creating.md)
+* [create the Identity](creating)
 * download or copy the JWT - this file contains the single use token
 * run `ziti` :
 
@@ -56,11 +56,11 @@ ziti edge enroll \
 
 This process is similar to the One Time Token flow from above. This flow expects that a private key and certificate have
 already been created on or distributed to the machine that is about to enroll and that the certificate presented is
-signed by a [third party CA](/ziti/manage/pki.md#third-party-ca-optional) already validated in the Ziti Controller.
+signed by a [third party CA](/ziti/manage/pki#third-party-ca-optional) already validated in the Ziti Controller.
 
 Follow these steps to enroll a 3rd Pary CA - one-time token identity:
 
-* [create the Identity](creating.md)
+* [create the Identity](creating)
 * download or copy the JWT - this file contains the one-time token
 * run the `ziti-tunneler` for your given operating system. Notice you can provide the name of the identity :
 
@@ -81,7 +81,7 @@ automatic. The act of enrolling the identity will create it. Like "3rd Party CA
 - One Time Token" - this flow expects that a private key and certificate have
 already been created on or distributed to the machine that is about to enroll.
 The certificate presented to the Ziti Controller must be issued by a [third
-party CA](/ziti/manage/pki.md#third-party-ca-optional) that was already
+party CA](/ziti/manage/pki#third-party-ca-optional) that was already
 imported and verified in the Ziti Controller with the
 `isAutoCaEnrollmentEnabled` property set to true.
 

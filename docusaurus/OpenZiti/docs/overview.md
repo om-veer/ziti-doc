@@ -23,8 +23,8 @@ Ziti represents the next generation of secure, open-source networking for your a
 **Developer Focus**
 * [Open source code, available with the Apache 2.0 license](https://github.com/openziti)
 * Fully programable REST management APIs
-* [SDKs for a variety of programming languages](../src/pages/ziti/clients/sdks.md)
-* [Application specific configuration store allowing centralized management of configuration allowing you to add structured configuration specific to your application](config-store/overview.md)
+* [SDKs for a variety of programming languages](./clients/sdks)
+* [Application specific configuration store allowing centralized management of configuration allowing you to add structured configuration specific to your application](config-store/overview)
 * An extensible fabric, allowing you to add your own 
     * load balancing algorithms
     * interconnect protocols
@@ -33,9 +33,9 @@ Ziti represents the next generation of secure, open-source networking for your a
     * control and management plane messaging and semantics   
 
 **Easy Management**
-* [A flexible and expressive policy model for managing access to services and edge routers](../src/pages/ziti/policies/overview.md)
+* [A flexible and expressive policy model for managing access to services and edge routers](./policies/overview)
 * A web based admin console
-* [Pre-built tunnelers and proxies for a variety of operating systems, including mobile](../src/pages/ziti/clients/tunneler.md)
+* [Pre-built tunnelers and proxies for a variety of operating systems, including mobile](./clients/tunneler)
 
 Let's break some of these buzzwords down.
 
@@ -73,10 +73,10 @@ End-to-end encryption means that even if systems between the client and server a
 ## Getting started with Ziti
 
 If you are looking to jump right in feet first you can follow along with one of our [up-and-running quickstart
-guides](../src/pages/ziti/quickstarts/quickstart-overview.md). The quickstart will leverage Amazon Web Services (AWS) and will have you
+guides](./quickstarts/network). The quickstart will leverage Amazon Web Services (AWS) and will have you
 launch an AMI which will get you up and running in no time.
 
-This environment is perfect for evaluators to get to know Ziti and the capabilities it offers.  The environement was not
+This environment is perfect for evaluators to get to know Ziti and the capabilities it offers.  The environment was not
 designed for large scale deployment or for long-term usage. If you are looking for a managed service to help you run a
 truly global, scalable network browse over to our website at http://netfoundry.io to learn more.
 
@@ -98,7 +98,7 @@ The Ziti project welcomes contributions including, but not limited to, code, doc
     * [ziti-doc](https://github.com/openziti/ziti-doc): Documention (which you are currently reading)
 * A [Discourse forum](https://openziti.discourse.group/) is available 
 
-Ziti was developed and open sourced by [NetFoundry, Inc](https://netfoundry.io). NetFoundry continues to fund and contribute to Ziti. 
+Ziti was developed and open sourced by [NetFoundry Inc.](https://netfoundry.io). NetFoundry continues to fund and contribute to Ziti. 
 
 ## Overview of a Ziti Network
 

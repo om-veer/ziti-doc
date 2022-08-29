@@ -1,7 +1,7 @@
 # Installing Ziti Administration Console
 
 The Ziti Administration Console (ZAC) is a UI provided by the OpenZiti project which will allow you to configure and 
-explore a [Ziti Network](xref:zitiOverview#overview-of-a-ziti-network). Installing the ZAC is relatively straightforward 
+explore a [Ziti Network](../../overview#overview-of-a-ziti-network). Installing the ZAC is relatively straightforward 
 and can be accomplished in two basic ways shown below.
 
 ## Setting up the Ziti Admin Console
@@ -18,8 +18,8 @@ translate to your shell accordingly.
 
 ### Cloning From GitHub
 
-These steps are applicable to both the [local, no docker](/ziti/quickstarts/network/local-no-docker.md) as well as the 
-[hosted yourself](/ziti/quickstarts/network/hosted.md) deployments. Do note, these steps expect you have the necessary 
+These steps are applicable to both the [local, no docker](../network/local-no-docker) as well as the 
+[hosted yourself](../network/hosted) deployments. Do note, these steps expect you have the necessary 
 environment variables established in your shell. If you used the default parameters, you can establish these variables 
 using the file at `${HOME}/.ziti/quickstart/$(hostname)/$(hostname).env`. To deploy ZAC after following one of those guides,
 you can perform the following steps.
@@ -82,7 +82,7 @@ you can perform the following steps.
     
 ### Using Docker
 
-Getting ZAC setup if you have followed the [docker network quickstart](/ziti/quickstarts/network/local-with-docker.md) 
+Getting ZAC setup if you have followed theaa [docker network quickstart](../network/local-with-docker) 
 should be straightforward. If you have used the default values from this quickstart you can issue the following command. 
 Notice that this command uses the default path: `${HOME}/docker-volume/myFirstZitiNetwork`. If you customized the path, 
 replace the paths specified in the volume mount sections below accordingly (the '-v' lines). Also note this command will 
@@ -107,7 +107,7 @@ if necessary.
 
 ### Using Docker Compose
 
-If you have followed the [docker compose quickstart](/ziti/quickstarts/network/local-docker-compose.md) getting the ZAC 
+If you have followed the [docker compose quickstart](../network/local-docker-compose) getting the ZAC 
 running within the compose file is a bit cumbersome because the docker-compose file will generate a full PKI on your 
 behalf. While this makes it very easy to get a basic network setup, it makes reusing that PKI in the ZAC difficult at 
 this time.  It's not difficult to reuse the PKI but you'll need to do the following:

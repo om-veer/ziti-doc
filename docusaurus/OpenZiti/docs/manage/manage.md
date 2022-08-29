@@ -8,14 +8,14 @@ instance is during the initial installation and when trying to expand the Ziti f
 ### Ziti Edge - Developer Edition
 
 An initial, simple installation of Ziti is already provided for you when using the 
-[Ziti Network Quickstart](../quickstarts/index.md).  The installation will contain a
-[Ziti Controller](controller.md), a [Ziti Edge Router](edge-router.md) and corresponding
-[PKI](pki.md). See the corresponding sections for additional details.
+[Ziti Network Quickstart](../quickstarts/index).  The installation will contain a
+[Ziti Controller](controller), a [Ziti Edge Router](edge-router) and corresponding
+[PKI](pki). See the corresponding sections for additional details.
 
 ### Ziti Installation - the long way
 
 At its most simple, a basic Ziti Network is composed of only two (or three depending on whether you count the database)
-components. The [Ziti Controller](controller.md) and a [Ziti Edge Router](edge-router.md).
+components. The [Ziti Controller](controller) and a [Ziti Edge Router](edge-router).
 (Note: these executables are not currently available for separate download but will be coming in the months ahead.)
 
 ### Expanding Ziti
