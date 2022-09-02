@@ -28,33 +28,7 @@ const config = {
   },
 
   plugins: [
-     [
-       "docusaurus-plugin-remote-content",
-       {
-         noRuntimeDownloads: true,
-         name: "sidecar-tunnel", // used by CLI, must be path safe
-         id: "sidecar-tunnel",
-         sourceBaseUrl: "https://raw.githubusercontent.com/openziti/ziti/release-next/quickstart/kubernetes/sidecar-tunnel/", // the base url for the markdown (gets prepended to all of the documents when fetching)
-         outDir: "docs/quickstarts/kubernetes", // the base directory to output to.
-         documents: [  // the file name(s) to download
-           "kubernetes-sidecar-tunnel-quickstart.md",
-           "sidecar-diagram.svg"],
-       }
-     ],
-     [
-       "docusaurus-plugin-remote-content",
-       {
-         noRuntimeDownloads: true,
-         name: "qs-docker-readme", // used by CLI, must be path safe
-         id: "qs-docker-readme",
-         sourceBaseUrl: "https://raw.githubusercontent.com/openziti/ziti/release-next/quickstart/docker/", // the base url for the markdown (gets prepended to all of the documents when fetching)
-         outDir: "ignore/src/pages/quickstarts/mobile", // the base directory to output to.
-         documents: [  // the file name(s) to download
-           "README.md",
-         ],
-         performCleanup: false,
-       }
-     ],
+
   ],
   presets: [
     [
@@ -67,6 +41,7 @@ const config = {
           // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+
         },
         blog: {
           showReadingTime: true,

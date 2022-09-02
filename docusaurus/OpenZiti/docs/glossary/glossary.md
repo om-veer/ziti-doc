@@ -60,7 +60,7 @@ certificate, rather than by a DNS name or an IP address (underlay concepts).
 
 ## Ziti Service, Service - Hosted
 Similar to a Ziti Service however the destination is not described as an IP address and port but rather it is expressed
-as a Ziti Identity. When used with a Ziti SDK it is possible to create a truly zero-trust application.
+as a Ziti Identity. When used with a Ziti SDK it is possible to create a truly zero trust application.
 
 ## Ziti Tunneler, Tunneler
 A Ziti Tunneler provides connectivity for applications that are not Ziti enabled. Our tunneler implementations provide an underlay connectivity component (TUN, tproxy, etc.), and then use the Ziti Endpoint SDK such that they can bridge connectivity onto the Ziti network.

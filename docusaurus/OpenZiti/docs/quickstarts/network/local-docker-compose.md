@@ -47,27 +47,29 @@ ZITI_EDGE_CONTROLLER_RAWNAME=ziti-edge-controller
 DEFAULT_ENV_FILE
 ```
 
-> [!Important]
-> If you are running Void linux, you need to modify the docker-compose file, otherwise the services will not start properly.  To do this, add the following two lines to each service definition.
->
-> ```
->    security_opt:
+:::caution
+If you are running Void linux, you need to modify the docker-compose file, otherwise the services will not start properly.  To do this, add the following two lines to each service definition.
+
+```
+    security_opt:
       - seccomp:unconfined
-> ```
-> Please see [this discussion](https://openziti.discourse.group/t/docker-compose-quickstart-setup-edge-controller-issue/601/10) for more information
+```
+Please see [this discussion](https://openziti.discourse.group/t/docker-compose-quickstart-setup-edge-controller-issue/601/10) for more information
+:::
 
 ## Running via Docker Compose
 
 Once the compose file is downloaded and the `.env` file exists, you'll be able to start this network using
 docker-compose just like you can with any other compose file: `docker-compose up`
 
-> [!Note]
-> Docker compose will name your containers based on the folder you were in when you started them. For me, I've made a folder
-> named `docker` so all my containers start with `docker_`. You can influence how this works by adding
-> `--project-name docker` (or whatever name you like) to your docker-compose up/down commands
-> ```bash
-> docker-compose --project-name docker up 
-> ```
+:::note
+Docker compose will name your containers based on the folder you were in when you started them. For me, I've made a folder
+named `docker` so all my containers start with `docker_`. You can influence how this works by adding
+`--project-name docker` (or whatever name you like) to your docker-compose up/down commands
+```bash
+docker-compose --project-name docker up 
+```
+:::
 
 ### Stopping the Network
 

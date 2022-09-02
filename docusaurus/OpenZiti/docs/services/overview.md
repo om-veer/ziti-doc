@@ -7,8 +7,8 @@ A service is defined by the following components:
 
 * **Name** - the name of the service
 * **Termination** - Ziti only provides access to a network service, it does not provide the service itself. The service must be able to get network traffic to whatever application or application cluster is actually providing the service, whether that provider has Ziti embedded or has no knowledge of Ziti
-* **Configuration** - Ziti allows application specific configuration to be stored for services. See [Configuration Store](../config-store/overview.md)
-* **Authorization** - For a details on controlling access to services, see [Policies](../policies/overview.md).
+* **Configuration** - Ziti allows application specific configuration to be stored for services. See [Configuration Store](@site/docs/config-store/overview.md)
+* **Authorization** - For a details on controlling access to services, see [Policies](@site/docs/policies/overview.md).
 
 ## Service Name
 Ziti services must have names that are unique to their Ziti installation. Service names are how clients address services in order to consume them. Services which are provided by applications with Ziti embedded also use the service name to indicate which service is being provided.
@@ -22,12 +22,12 @@ There are some trade-offs to consider for each type of termination.
 
 1. Do you want end-to-end zero trust? If yes, that requires that both the client and server have Ziti identities and can connect securely with provisioned certificates.
 1. Do you want Ziti to provide end-to-end encryption? Developers can always provide their own end-to-end encryption on top of the connectivity that Ziti provides, but not all modes of service termination allow Ziti to encrypt traffic end-to-end for you.
-1. How accessible to non-zero-trust clients do you want your server application to be? With the proper configuration applications can be fully 'dark', meaning they do not listen for connections.  
+1. How accessible to non-zero trust clients do you want your server application to be? With the proper configuration applications can be fully 'dark', meaning they do not listen for connections.  
 
 ### SDK Embedded Applications
 The server application can embed the Ziti Edge SDK. The application will have an enrolled identity and provisioned certificates. This has several advantages:
 
-1. Connections between the application and Ziti will be secured using certificates. This enables true zero-trust and end-to-end encrypted connections betwen SDK based clients and SDK based servers. 
+1. Connections between the application and Ziti will be secured using certificates. This enables true zero trust and end-to-end encrypted connections betwen SDK based clients and SDK based servers. 
 1. With an identity, the server application can particpate in the Ziti security model. This means you can control which services the application can provide, and revoke access as needed. You can also control which edge routers the application may connect to.
 1. The application will be 'dark'. Instead of listening for incoming network connections, the application will make an outgoing, secured connection to one or more Ziti edge routers. It will then receive network requests over these secured connections.
 
@@ -51,10 +51,10 @@ Routers also have the ability to connect to applications providing services. Thi
 ### Summary
 
 | Termination Type | End-to-end Zero Trust | Managed by Policies | Ziti Provided End-to-end encryption | Dark Server Application | 
-| -----------------| ----------------------|--------------------|-------------------------------------|-------------------------|
+| -----------------| ----------------------|---------------------|-------------------------------------|-------------------------|
 | SDK Embedded     | Yes                   | Yes                 | Yes                                 | Yes                     |
 | SDK Based Proxy  | No, only to proxy     | Yes (via Proxy)     | Only to proxy. If desired, full end-to-end must be done externally | No. Can be relatively locked down, though |
-| Ziti Router      | No                    |No                  | No. If desired, end-to-end must be done externally | No. Can be relatively locked down, though. |
+| Ziti Router      | No                    | No                  | No. If desired, end-to-end must be done externally | No. Can be relatively locked down, though. |
 
 ### Terminators
 Terminators represent a way to connect to a specific server application for a specific service. 

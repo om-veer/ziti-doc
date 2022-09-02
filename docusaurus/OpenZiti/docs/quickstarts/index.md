@@ -1,5 +1,0 @@
-<Redirect
-to={{
-pathname: "./network",
-}}
-/>

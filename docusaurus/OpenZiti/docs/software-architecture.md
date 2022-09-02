@@ -1,6 +1,6 @@
 ---
 sidebar_position: 2
-uid: zitiSoftwareArchitecture
+id: zitiSoftwareArchitecture
 ---
 
 # Software Architecture

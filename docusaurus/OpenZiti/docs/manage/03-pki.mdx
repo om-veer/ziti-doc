@@ -1,13 +1,16 @@
-## Public Key Infrastructure (PKI)
+import PkiTroubleshootingMd from './_pki-troubleshooting.md'
+
+# Public Key Infrastructure (PKI)
 
 All Ziti Networks leverage [Public Key Infrastructure (PKI)](https://en.wikipedia.org/wiki/Public_key_infrastructure) to
 provide secure network connections.  This page is not intended to be a comprehensive guide. What it is, is a set of
 rules that must be followed to properly configure a Ziti Network. If there are issues when connecting any portion
 of a Ziti Network to another - this page should serve as a starting point of understanding.
 
-> [!NOTE]
-> PKI is a complex topic and it is recommended to be familiar with what is a PKI as well as how to properly use and
-> configure a one before making any decisions about the PKI the Ziti Network uses.
+:::note
+PKI is a complex topic and it is recommended to be familiar with what is a PKI as well as how to properly use and
+configure a one before making any decisions about the PKI the Ziti Network uses.
+:::
 
 The Ziti Network allows the operator to declare any trust anchors as valid. This means Ziti does not need to be
 configured with a full chain of certificates which link fully back to a root CA. A configuration using a full chain back
@@ -129,4 +132,4 @@ To finish verifying the third party CA, the certificate created with the verific
 Controller at `/cas/${id}/verify`. The `id` is also obtained during the creation process. After posting the certificate
 with the `verificationToken` as the common name the third party CA will change from `isVerified=false` to `isVerified=true`.
 
-[!include[](pki-troubleshooting.md)]
+<PkiTroubleshootingMd />

@@ -1,4 +1,7 @@
-## Creating a Service
+---
+title: Creating
+---
+# Creating a Service
 
 Here's how you can create a service.
 

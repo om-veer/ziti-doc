@@ -121,9 +121,9 @@ web
         }
 ```
 
-> [!Note]
-> Prometheus will silently discard metrics that are older than five minutes.
-
+:::note
+Prometheus will silently discard metrics that are older than five minutes.
+:::
 
 ### Prometheus Configuration
 

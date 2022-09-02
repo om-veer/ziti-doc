@@ -18,6 +18,6 @@ Let's break that command down a bit:
 * **metrics:json:** Get metrics in json format.  Other formats include:
   * **prometheus:** Get metrics in the Prometheus [text exposition format] (https://prometheus.io/docs/instrumenting/exposition_formats/#text-based-format).
 
-> [!Tip]
-> The default CLI result will strip json markup.  Add `-j` to the inspect command to get the raw json output.
-
+:::tip
+The default CLI result will strip json markup.  Add `-j` to the inspect command to get the raw json output.
+:::

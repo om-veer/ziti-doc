@@ -1,4 +1,7 @@
-## Enrolling an Identity
+---
+title: Enrolling
+---
+# Enrolling an Identity
 
 All connections made to the Ziti network leverage [mutual TLS](https://en.wikipedia.org/wiki/Mutual_authentication)
 which means every client needs a valid X509 certificate which it will present to the Ziti network during the connection
@@ -9,9 +12,8 @@ process. The process of obtaining a key/certificate pair and presenting it secur
 
 All identities need to be enrolled with the Ziti Controller so the Ziti Controller can authenticate the incoming connection.
 This process is slightly different for each type of identity and is complex. The easiest way to enroll an identity is to 
-use either the Ziti Desktop Edge/Ziti Mobile Edge for your operating system. Alternatively, you may perform the enrollment separate with the `ziti` CLI:
-
-[!include[](../../src/pages/downloads/ziti-cli)]
+use either the Ziti Desktop Edge/Ziti Mobile Edge for your operating system. Alternatively, you may perform the enrollment separate 
+with the `ziti` CLI which can be downloaded from the [GitHub releases page](https://github.com/openziti/ziti/releases/latest) 
 
 ### One Time Token Enrollment - Internal PKI
 
@@ -33,12 +35,13 @@ ziti edge enroll \
     --out ${identity_config_file}
 ```
 
-> [!IMPORTANT]
-> The output from the `ziti` is a permanent identity configuration file which
-> must be stored securely. This file contains within it the private key that backs
-> the certificate issued by the Ziti Controller.  This file should not be
-> transferred or shared and should not be moved from the machine unless you are
-> confident you understand the risks involved in doing so.
+:::important
+The output from the `ziti` is a permanent identity configuration file which
+must be stored securely. This file contains within it the private key that backs
+the certificate issued by the Ziti Controller.  This file should not be
+transferred or shared and should not be moved from the machine unless you are
+confident you understand the risks involved in doing so.
+:::
 
 **Example Usage for `ziti-edge-tunnel` CLI**
 
@@ -60,7 +63,7 @@ signed by a [third party CA](/ziti/manage/pki#third-party-ca-optional) already v
 
 Follow these steps to enroll a 3rd Pary CA - one-time token identity:
 
-* [create the Identity](creating)
+* [create the Identity](creating.mdx)
 * download or copy the JWT - this file contains the one-time token
 * run the `ziti-tunneler` for your given operating system. Notice you can provide the name of the identity :
 

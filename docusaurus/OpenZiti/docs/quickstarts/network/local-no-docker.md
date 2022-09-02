@@ -3,7 +3,7 @@ sidebar_position: 3
 ---
 # Local - No Docker
 
-This page will show you how to get your [Ziti Network](/ziti/docs/overview#overview-of-a-ziti-network) up and running 
+This page will show you how to get your [Ziti Network](../index.md#overview-of-a-ziti-network) up and running 
 quickly and easily, entirely locally. Since you'll be running everything locally, you'll have no issues communicating
 between network components. All the processes will run locally, and you'll be responsible for starting and stopping them
 when you want to turn the overlay network on or off.

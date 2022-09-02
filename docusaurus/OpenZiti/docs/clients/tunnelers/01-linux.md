@@ -1,4 +1,7 @@
-## Linux
+---
+title: Linux
+---
+# Linux
 
 ### The Tunneller CLI
 
@@ -8,8 +11,9 @@ The purpose of the tunneller is to configure host access. This means all users a
 
 ### Installation and Upgrade
 
-> [!NOTE]
-> It is not necessary to manually enroll the identity when using the RPM or DEB package. Just install the token in the identities directory and it will be enrolled when you start the daemon.
+:::note
+It is not necessary to manually enroll the identity when using the RPM or DEB package. Just install the token in the identities directory and it will be enrolled when you start the daemon.
+:::
 
 #### Installing the DEB
 
@@ -98,7 +102,7 @@ wget -q "https://github.com/openziti/ziti-tunnel-sdk-c/releases/latest/download/
 
 You will need the token file or its contents to enroll. Enrollment is the act of exchanging the token for an identity that is to be permanently installed in the filesystem.
 
-[Here's a link to the article about enrolling](../identities/enrolling.md)
+[Here's a link to the article about enrolling](@site/docs/identities/enrolling.md)
 
 ### Global Options
 
@@ -336,10 +340,6 @@ the route for the service:
 [0012]  INFO adding bogushost.net -> 169.254.1.4 to resolver
 [0012]  INFO ziti/tunnel/protocols/tcp.Listen: Accepting on 169.254.1.4:25 service=telnet
 ```
-
-### proxy
-
-[!include[](proxy-example.md)]
 
 ### Troubleshooting
 

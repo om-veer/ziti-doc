@@ -10,9 +10,10 @@ In this quickstart you will see the commands used to work with SoftHSMv2 and zit
 context will be provided for each step. When appropriate there will be a small amount of context included to aid in
 understanding of what is happening and why.
 
-> [!WARNING]
+:::caution
 This quickstart intended audience is for more technically savvy indiviuals. You will need to be familar with the command
 line interface of your operating system.
+:::
 
 ## Prerequistites
 
@@ -29,7 +30,7 @@ Here's the list of steps we'll accomplish in this quickstart:
   these environment variables*. They need to be setup properly. If you have problems with this guide it is almost
   certainly because you have an environment variable setup incorrectly. Double check them.
 * Make a directory and generate a configuration file for SoftHSM
-* Use the [Ziti CLI](https://netfoundry.jfrog.io/netfoundry/ziti-release/ziti/) to:
+* Use the [Ziti CLI](https://github.com/openziti/ziti/releases/latest) to:
     * create two identities - one demonstrating an RSA key, one EC
     * enroll the identities
     * create a test service

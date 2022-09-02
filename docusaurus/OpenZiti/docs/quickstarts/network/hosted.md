@@ -1,9 +1,9 @@
 ---
 sidebar_position: 10
 ---
-# Host OpenZiti Anywheredd
+# Host OpenZiti Anywhere
 
-You can absolutely choose to host your [OpenZiti Network](../../overview#overview-of-a-ziti-network) anywhere you like.
+You can absolutely choose to host your [OpenZiti Network](../index.md#overview-of-a-ziti-network) anywhere you like.
 It is not necessary for the server to be on the open internet. If it works better for you to deploy OpenZiti on your
 own network, great, do that.  The only requirement to be aware of is that every piece of the a network will need to be able to communicate to the controller at least one edge router.
 
@@ -12,7 +12,7 @@ ideal scenario. With a zero trust overlay network provided by OpenZiti, you can 
 
 ## Installation
 
-When starting out deploying a [OpenZiti Network](../../overview#overview-of-a-ziti-network), we recommend you follow
+When starting out deploying a [OpenZiti Network](../index.md#overview-of-a-ziti-network), we recommend you follow
 and use the `expressInstall` function provided by the OpenZiti project. Once you're familiar with the network and
 the configuration options available you'll be better equipped to make changes.
 
@@ -57,12 +57,13 @@ variable. For example:
 export EXTERNAL_DNS="ec2-18-100-100-100.us-east-2.compute.amazonaws.com"
 ```
 
-> [!Note]
-> Make sure you have `jq` installed on your machine. From ubuntu that would look like:
->
-> ```bash
-> sudo apt update && sudo apt install jq -y
-> ```
+:::note
+Make sure you have `jq` installed on your machine. From ubuntu that would look like:
+
+```bash
+sudo apt update && sudo apt install jq -y
+```
+:::
 
 Once you do that, you'll be able to
 execute these commands just as
