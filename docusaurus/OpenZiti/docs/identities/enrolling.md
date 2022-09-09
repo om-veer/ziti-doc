@@ -59,7 +59,7 @@ confident you understand the risks involved in doing so.
 
 This process is similar to the One Time Token flow from above. This flow expects that a private key and certificate have
 already been created on or distributed to the machine that is about to enroll and that the certificate presented is
-signed by a [third party CA](/ziti/manage/pki#third-party-ca-optional) already validated in the Ziti Controller.
+signed by a [third party CA](../manage/pki#third-party-ca-optional) already validated in the Ziti Controller.
 
 Follow these steps to enroll a 3rd Pary CA - one-time token identity:
 
@@ -84,7 +84,7 @@ automatic. The act of enrolling the identity will create it. Like "3rd Party CA
 - One Time Token" - this flow expects that a private key and certificate have
 already been created on or distributed to the machine that is about to enroll.
 The certificate presented to the Ziti Controller must be issued by a [third
-party CA](/ziti/manage/pki#third-party-ca-optional) that was already
+party CA](../manage/pki#third-party-ca-optional) that was already
 imported and verified in the Ziti Controller with the
 `isAutoCaEnrollmentEnabled` property set to true.
 

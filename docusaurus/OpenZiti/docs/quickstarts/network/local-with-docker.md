@@ -12,8 +12,8 @@ containers for each component in the future but for now it's a single container.
 
 ## Starting the Controller
 
-All [Ziti Networks](../overview#overview-of-a-ziti-network) require
-a [Ziti Controller](../manage/controller). Without a controller, edge routers won't be able to authorize new
+All [Ziti Networks](../../overview#overview-of-a-ziti-network) require
+a [Ziti Controller](../../manage/controller). Without a controller, edge routers won't be able to authorize new
 connections rendering a new network useless. You must have a controller running.
 
 ### Required - Volume Mount
@@ -87,7 +87,7 @@ docker run \
 
 ## Edge Router
 
-At this point you should have a [Ziti Controller](../manage/controller) running. You should have created your
+At this point you should have a [Ziti Controller](../../manage/controller) running. You should have created your
 Docker network as well as creating the volume mount. Now it's time to connect your first edge router. The same Docker
 image that runs the controller can run an edge router. To start an edge router, you will run a very similar command as
 the one to start the controller with a couple of key differences.

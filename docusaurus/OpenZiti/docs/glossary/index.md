@@ -1,3 +1,6 @@
+---
+id: glossary
+---
 # Glossary
 Here you will find a list of terms you may come across as you are using Ziti.
 

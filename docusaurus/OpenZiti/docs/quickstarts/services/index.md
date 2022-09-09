@@ -17,4 +17,4 @@ into an application you write! It's probably best to explore the best SDK for yo
 If you're not a developer, or if you have an application which you can't (or don't want to) change you can start with "zero trust host 
 access". For this, you will install an [OpenZiti tunneller](../../clients/tunnelers) on your "clients" and on your "servers" and 
 provide access to your services using these executables. If this sounds like a good place to start, 
-[check out the host access quickstart](../quickstarts/services/ztha).
+[check out the host access quickstart](ztha).

@@ -6,4 +6,4 @@ types of routers: edge routers and fabric routers.
 At this time edge routers are available for use with a [Ziti Network](../overview#overview-of-a-ziti-network). See
 the [Ziti Network Quickstart](../quickstarts/network/) for details about how to create your network.
 
-Read more about [edge routers here](edge-router.md).
+Read more about [edge routers here](./edge-router).

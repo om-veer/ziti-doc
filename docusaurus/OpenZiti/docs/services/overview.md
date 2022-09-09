@@ -142,4 +142,4 @@ This strategy drives costs in the same way as the `smartrouting` strategy. Howev
 ##### `random`
 This strategy does not change terminator weights. It does simple random selection across all terminators of the highest precedence. 
 
-[!include[](creating.md)]
+[!include[](creating.mdx)]
