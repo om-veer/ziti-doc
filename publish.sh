@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-apt install jq -y
+#apt install jq -y
 
 mkdir -p ~/.ssh
 
@@ -28,7 +28,7 @@ if [ "${GIT_BRANCH}" == "main" ]
 then
   echo on main branch - publish can proceed
 
-  ./gendoc.sh
+  ./gendoc.sh -d
 
   echo "configuring git..."
   ziti-ci configure-git
@@ -50,7 +50,7 @@ then
   rm -r openziti.github.io/*
 
   # copy all the docs-local into the publish site
-  cp -r docs-local/* openziti.github.io/
+  cp -r ./docusaurus/OpenZiti/build/* openziti.github.io/
   cd openziti.github.io
   git add *
   if [[ "$(git config --get remote.origin.url | cut -b1-3)" == "htt" ]]; then
@@ -79,7 +79,8 @@ then
 
   echo "showing the git config"
   git config --get remote.origin.url
-  git diff-index --quiet HEAD || git commit -m "[ci skip] publish docs from CI" && git push
+  git diff-index --quiet HEAD 
+  #|| git commit -m "[ci skip] publish docs from CI" && git push
 
   echo __________________________________________________________________________
 else
