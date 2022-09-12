@@ -109,7 +109,10 @@ pushd ${ZITI_DOC_GIT_LOC}
 if [[ ! "${ZITI_DOCUSAURS}" == "true" ]]; then
   docfx build ${WARNINGS_AS_ERRORS}
 else
-  yarn build
+  echo "running yarn install"
+  yarn install
+  echo "running npm run build"
+  npm run build
 fi
 popd
 exit

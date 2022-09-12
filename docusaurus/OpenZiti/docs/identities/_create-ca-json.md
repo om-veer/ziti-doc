@@ -1,3 +1,4 @@
+```
     Verb: POST
 
     name:
@@ -18,3 +19,4 @@
       "isAuthEnabled": ${true|false},
       "certPem": "${string}"
     }
+```

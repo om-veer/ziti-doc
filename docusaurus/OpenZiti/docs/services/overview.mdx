@@ -1,3 +1,5 @@
+import CreatingMd from './creating.mdx'
+
 # Ziti Services
 
 The primary strategy assumes that one function of Ziti is providing access to "services". A service encapsulates the definition of any
@@ -127,7 +129,7 @@ Each terminator also has a dynamic cost that will move a terminator up and down 
 Each terminator has an associated precedence and dynamic cost. This can be reduced to a single cost. The cost algorithm ensures terminators at different precedence levels do not overlap. So a terminator which is marked failed, with dynamic cost 0, will always have a higher calculated cost than a terminator with default precedence and maximum value for dynamic cost. 
 
 #### Strategies
-The fabric currently provides four strategy implementions.
+The fabric currently provides four strategy implementations.
 
 ##### `smartrouting`
 This is the default strategy. It always uses the lowest cost terminator. It drives costs as follows:
@@ -142,4 +144,4 @@ This strategy drives costs in the same way as the `smartrouting` strategy. Howev
 ##### `random`
 This strategy does not change terminator weights. It does simple random selection across all terminators of the highest precedence. 
 
-[!include[](creating.mdx)]
+<CreatingMd />

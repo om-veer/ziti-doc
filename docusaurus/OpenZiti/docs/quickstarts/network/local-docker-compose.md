@@ -29,7 +29,7 @@ or just make a file in this folder that looks like this:
 curl -o .env https://raw.githubusercontent.com/openziti/ziti/release-next/quickstart/docker/.env
 ```
 or
-```bash
+```text
 cat > .env <<DEFAULT_ENV_FILE
 # OpenZiti Variables
 ZITI_IMAGE=openziti/quickstart

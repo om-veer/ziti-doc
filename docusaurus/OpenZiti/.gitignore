@@ -20,4 +20,6 @@ yarn-debug.log*
 yarn-error.log*
 
 _remotes
+remotes
 docs/_remotes
+ziti
