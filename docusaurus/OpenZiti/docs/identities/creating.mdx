@@ -4,6 +4,8 @@ title: Creating
 import CreateCliExampleMd from './_create-identity-cli.md'
 import CreateCaJsonMd from './_create-ca-json.md'
 import CreateIdCliMd from './_create-identity-cli.md'
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # Creating an Identity
 
@@ -61,7 +63,8 @@ present a certificate during the connection process that is valid per the provid
 
 Adding a certificate to the Ziti Controller is easy using the Ziti Console.
 
-#### [New CA via UI](#tab/tabid-new-ca-ui)
+<Tabs>
+<TabItem value="tabid-new-ca-ui" label="New CA via UI">
 
 1. On the left side click "Certificate Authorities"
 1. In the top right corner of the screen click the "plus" image to add a new Certificate Authority
@@ -69,11 +72,13 @@ Adding a certificate to the Ziti Controller is easy using the Ziti Console.
 1. Choose if the CA should be used for Enrollment (yes) and Auth (yes)
 1. Click save
 
-#### [New CA via REST](#tab/tabid-new-ca-cli)
+</TabItem>
+<TabItem value="tabid-new-ca-cli" label="New CA via REST">
 
 <CreateCaJsonMd/>
 
-***
+</TabItem>
+</Tabs>
 
 #### 3rd Party CA - One Time Token
 
@@ -101,7 +106,8 @@ multiple identities. An enrollment request is comprised of a special enrollment 
 using the signed client certificate as the TLS client certificate and an optional JSON payload that allows the client to
 specify the devices display name and internal username. See [enrollment](./enrolling) for more details on enrolling.
 
-### [New 3rd Party CA Identity via UI](#tab/tabid-new-identity-ui)
+<Tabs>
+<TabItem label="New 3rd Party CA Identity via UI" value="tabid-new-identity-ui">
 
 1. On the left side click "Certificate Authorities"
 1. In the top right corner of the screen click the "plus" image to add a new Certificate Authority
@@ -109,11 +115,13 @@ specify the devices display name and internal username. See [enrollment](./enrol
 1. Choose if the CA should be used for Enrollment (yes) and Auth (yes)
 1. Click save
 
-### [New 3rd Party Identity via CLI](#tab/tabid-new-identity-cli)
+</TabItem>
+<TabItem label="New 3rd Party Identity via CLI" value="tabid-new-identity-cli">
 
 <CreateIdCliMd/>
 
-***
+</TabItem>
+</Tabs>
 
 ## Choosing an Identity Type
 

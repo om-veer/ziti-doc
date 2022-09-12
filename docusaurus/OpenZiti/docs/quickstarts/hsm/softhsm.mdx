@@ -1,3 +1,6 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # SoftHSMv2
 
 ## Overview
@@ -45,7 +48,8 @@ Here's the list of steps we'll accomplish in this quickstart:
 
 Open a command line and establish the following environment varibles. 
 
-# [Linux/MacOS](#tab/env-var-linux)
+<Tabs>
+<TabItem value="env-var-linux" label="Linux/MacOS">
 
     # the name of the ziti controller you're logging into
     export ZITI_CTRL=local-edge-controller
@@ -83,7 +87,8 @@ Open a command line and establish the following environment varibles.
     # make an alias for ease
     alias p='pkcs11-tool --module $PKCS11_MODULE'
 
-# [Windows](#tab/env-var-windows)
+</TabItem>
+<TabItem value="env-var-windows" label="Windows">
 
 Ensure you use the correct dll. If you use an x86 dll with x64 binaries you'll get an error.
 
@@ -123,11 +128,13 @@ Ensure you use the correct dll. If you use an x86 dll with x64 binaries you'll g
     REM make an alias for ease
     doskey p="c:\Program Files\OpenSC Project\OpenSC\tools\pkcs11-tool.exe" --module %PKCS11_MODULE% $*
 
-***
+</TabItem>
+</Tabs>
 
 ### Make Directories and Generate Config Files
 
-# [Linux/MacOS](#tab/dirs-and-config-linux)
+<Tabs>
+<TabItem value="dirs-and-config-linux" label="Linux/MacOS">
 
     cd ${HSM_ROOT}
 
@@ -153,7 +160,8 @@ Ensure you use the correct dll. If you use an x86 dll with x64 binaries you'll g
     slots.mechanisms = ALL
     HERE
 
-# [Windows](#tab/dirs-and-config-windows)
+</TabItem>
+<TabItem value="dirs-and-config-windows" label="Windows">
 
     cd /d %HSM_ROOT%
 
@@ -182,11 +190,13 @@ Ensure you use the correct dll. If you use an x86 dll with x64 binaries you'll g
 
     slots.mechanisms = ALL > %SOFTHSM2_CONF%
 
-***
+</TabItem>
+</Tabs>
 
 ### Use the Ziti CLI
 
-# [Linux/MacOS](#tab/ziti-cli-linux)
+<Tabs>
+<TabItem value="ziti-cli-linux" label="Linux/MacOS">
 
     ziti edge login $ZITI_CTRL:1280 -u $ZITI_USER -p $ZITI_PWD -c $ZITI_CTRL_CERT
 
@@ -196,7 +206,8 @@ Ensure you use the correct dll. If you use an x86 dll with x64 binaries you'll g
     # create a second new identity and output the jwt to a known location
     ziti edge create identity device "${EC_ID}" -o "${HSM_DEST}/${EC_ID}.jwt"
 
-# [Windows](#tab/ziti-cli-windows)
+</TabItem>
+<TabItem value="ziti-cli-windows" label="Windows">
 
     ziti edge login %ZITI_CTRL%:1280 -u %ZITI_USER% -p %ZITI_PWD% -c %ZITI_CTRL_CERT%
 
@@ -206,11 +217,13 @@ Ensure you use the correct dll. If you use an x86 dll with x64 binaries you'll g
     REM create a second new identity and output the jwt to a known location
     ziti edge create identity device "%EC_ID%" -o "%HSM_DEST%\%EC_ID%.jwt"
 
-***
+</TabItem>
+</Tabs>
 
 ### Use pkcs11-tool to Setup SoftHSMv2
 
-# [Linux/MacOS](#tab/pkcs11-tool-linux)
+<Tabs>
+<TabItem value="pkcs11-tool-linux" label="Linux/MacOS">
 
     p --init-token --label "ziti-test-token" --so-pin $HSM_SOPIN
 
@@ -218,7 +231,8 @@ Ensure you use the correct dll. If you use an x86 dll with x64 binaries you'll g
     p -p $HSM_PIN -k --key-type rsa:2048 --id "${HSM_ID1}" --label ziti-rsa-key --usage-sign --usage-decrypt
     p -p $HSM_PIN -k --key-type EC:prime256v1 --id ${HSM_ID2} --label ziti-ecdsa-key --usage-sign --usage-decrypt
 
-# [Windows](#tab/pkcs11-tool-windows)
+</TabItem>
+<TabItem value="pkcs11-tool-windows" label="Windows">
 
     p --init-token --label "ziti-test-token" --so-pin %HSM_SOPIN%
     p --init-pin --pin "%HSM_PIN%" --so-pin %HSM_SOPIN%
@@ -227,25 +241,30 @@ Ensure you use the correct dll. If you use an x86 dll with x64 binaries you'll g
     p -p "%HSM_PIN%" -k --key-type rsa:2048 --id "%HSM_ID1%" --label ziti-rsa-key --usage-sign --usage-decrypt
     p -p "%HSM_PIN%" -k --key-type EC:prime256v1 --id "%HSM_ID2%" --label ziti-ecdsa-key --usage-sign --usage-decrypt
 
-***
+</TabItem>
+</Tabs>
 
 ### Use ziti-tunnel to Enroll the Identities
 
-# [Linux/MacOS](#tab/enroll-linux)
+<Tabs>
+<TabItem value="enroll-linux" label="Linux/MacOS">
 
     ziti-tunnel enroll -j "${HSM_DEST}/${RSA_ID}.jwt" -k "pkcs11://${PKCS11_MODULE}?id=${HSM_ID1}&pin=${HSM_PIN}" -v
     ziti-tunnel enroll -j "${HSM_DEST}/${EC_ID}.jwt" -k "pkcs11://${PKCS11_MODULE}?id=${HSM_ID2}&pin=${HSM_PIN}" -v
 
-# [Windows](#tab/enroll-windows)
+</TabItem>
+<TabItem value="enroll-windows" label="Windows">
 
     ziti-tunnel enroll -j "%HSM_DEST%\%RSA_ID%.jwt" -k "pkcs11://%PKCS11_MODULE%?id=%HSM_ID1%&pin=%HSM_PIN%" -v
     ziti-tunnel enroll -j "%HSM_DEST%\%EC_ID%.jwt" -k "pkcs11://%PKCS11_MODULE%?id=%HSM_ID2%&pin=%HSM_PIN%" -v
 
-***
+</TabItem>
+</Tabs>
 
 ### Use ziti-tunnel to Verify Things Work
 
-# [Linux/MacOS](#tab/start-tunnel-linux)
+<Tabs>
+<TabItem value="start-tunnel-linux" label="Linux/MacOS">
 
     # if you only have a single edge router this command will work without the need for copy/paste
     EDGE_ROUTER_ID=$(ziti edge list edge-routers | cut -d " " -f2)
@@ -273,7 +292,8 @@ Ensure you use the correct dll. If you use an x86 dll with x64 binaries you'll g
     curl -H "Host: wttr.in" http://localhost:8000
     curl -H "Host: wttr.in" http://localhost:9000
 
-# [Windows](#tab/start-tunnel-windows)
+</TabItem>
+<TabItem value="start-tunnel-windows" label="Windows">
 
     REM these two commands can't be copied and pasted - you need to get the result of the first command and use it in the next
     REM run this command and get the id from the first edge-router.
@@ -305,7 +325,8 @@ Ensure you use the correct dll. If you use an x86 dll with x64 binaries you'll g
 
     REM ctrl-break or ctrl-pause to kill the tunnelers
 
-***
+</TabItem>
+</Tabs>
 
 ### Putting It All Together
 
@@ -321,7 +342,8 @@ The tabs to the right contain example output from running all the commands in se
 output would likely look like click one of the tabs to the right. Reminder - it's a lot of commands and a lot of output!
 :)
 
-# [Linux/MacOS](#tab/verify-linux)
+<Tabs>
+<TabItem value="verify-linux" label="Linux/MacOS">
 
     cd@sg1 ~/.softhsm/softhsm_demo
     $ # the name of the ziti controller you're logging into
@@ -863,7 +885,8 @@ output would likely look like click one of the tabs to the right. Reminder - it'
 
     cd@sg1 ~/.softhsm/softhsm_demo
 
-# [Windows](#tab/verify-windows)
+</TabItem>
+<TabItem value="verify-windows" label="Windows">
 
     c:\path\to\softhsm\softhsm_demo>REM the name of the ziti controller you're logging into
 
@@ -1274,4 +1297,5 @@ output would likely look like click one of the tabs to the right. Reminder - it'
 
     c:\path\to\softhsm\softhsm_demo>
 
-***
+</TabItem>
+</Tabs>

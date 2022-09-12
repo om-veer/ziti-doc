@@ -1,3 +1,7 @@
+import CreateSPsMd from './creating-service-policies.mdx'
+import CreateERPsMd from './creating-edge-router-policies.mdx'
+import CreateSERPsMd from './creating-service-edge-router-policies.mdx'
+
 # Policies
 Ziti policies control which identities can access or host which services
 via which edge routers. There are three kinds of policies, and we'll walk 
@@ -113,7 +117,6 @@ can be used to access that particular service.
 ### Policy Advisor 
 To help diagnose issues there is a policy advisor API which the CLI has a wrapper for.
 
-
     $ ziti edge policy-advisor services -q
     OKAY : simple-client (1) -> simple (1) Common Routers: (1/1) Dial: Y Bind: N 
 
@@ -135,11 +138,12 @@ The policy advisor can look at all services or identities, or a specific service
 # Managing Policies
 ## Service Policies
 
-[!include[](creating-service-policies.md)]
+<CreateSPsMd />
 
 ## Edge Router Policies
 
-[!include[](creating-edge-router-policies.md)]
+<CreateERPsMd />
 
 ## Service Edge Router Policies
-[!include[](creating-service-edge-router-policies.md)]
+
+<CreateSERPsMd />

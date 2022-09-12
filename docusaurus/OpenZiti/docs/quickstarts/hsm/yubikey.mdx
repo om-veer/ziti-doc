@@ -367,15 +367,16 @@ warned! Also note that this content is subject to change. If the output you see 
 software has changed since this information was captured. File an [issue](https://github.com/openziti/ziti-doc/issues)
 if you'd like to see it updated.
 
-# [Sample Output](#tab/hidden-linux)
+<Tabs>
+<TabItem value="hidden-linux" label="Sample Output">
 
 The tabs to the right contain example output from running all the commands in sequence. If you want to see what the
 output would likely look like click one of the tabs to the right. Reminder - it's a lot of commands and a lot of output!
 :)
 
-# [Linux/MacOS](#tab/verify-linux)
+</TabItem>
+<TabItem value="verify-linux" label="Linux/MacOS">
 
-    -- coming soon--
     cd@cd-ubuntuvm: # the name of the ziti controller you're logging into
     cd@cd-ubuntuvm: export ZITI_CTRL=local-edge-controller
     cd@cd-ubuntuvm: # the location of the certificate(s) to use to validate the controller
@@ -719,7 +720,8 @@ output would likely look like click one of the tabs to the right. Reminder - it'
     [  25.856]    INFO github.com/netfoundry/ziti-edge/tunnel/intercept/proxy.(*interceptor).Stop: stopping proxy interceptor
     [  25.856]    INFO github.com/netfoundry/ziti-edge/tunnel/intercept/proxy.(*interceptor).Stop: stopping proxy interceptor
 
-# [Windows](#tab/verify-windows)
+</TabItem>
+<TabItem value="verify-windows" label="Windows">
 
     c:\path\to\yubico-piv-tool-2.0.0\yubikey_windemo>REM the name of the ziti controller you're logging into
 
@@ -1118,4 +1120,5 @@ output would likely look like click one of the tabs to the right. Reminder - it'
     [  39.021]    INFO github.com/netfoundry/ziti-edge/tunnel/intercept/proxy.(*interceptor).Stop: stopping proxy interceptor
     REM set the codepage for the cmd prompt so that the output looks nice
 
-***
+</TabItem>
+</Tabs>
