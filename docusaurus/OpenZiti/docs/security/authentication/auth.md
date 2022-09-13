@@ -1,3 +1,7 @@
+---
+title: Authentication
+---
+
 # Authentication
 
 Authentication in Ziti Edge occurs when a client wishes to interact with the Ziti Edge Controller. Authentication

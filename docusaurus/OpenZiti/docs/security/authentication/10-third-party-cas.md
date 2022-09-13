@@ -1,4 +1,4 @@
-# 3rd Party CA
+# 3rd Party CAs
 
 3rd Party CAs allow external private key infrastructures (PKIs) to be imported into Ziti and used for client enrollment
 and authentication. Ziti does not allow external private keys from PKIs to be imported for 3rd party CAs. Creation and
