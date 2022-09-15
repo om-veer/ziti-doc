@@ -24,7 +24,7 @@
 4. Run the container to gain a shell
 
     ```bash
-    docker run -v "$(pwd)":/ziti-doc --rm -it openziti/doc:docfx /bin/bash
+    docker run -v "$(realpath $(pwd)/..)":/ziti-doc --rm -it openziti/doc:docfx /bin/bash
     ```
 
 5. Try things out
