@@ -81,7 +81,7 @@ APIs, Edge Client and Management included, to listen on any combination of netwo
 
 ### Controller Configuration Reference
 
-[The controller configuration reference](../../30-configuration/controller.md)
+[The controller configuration reference](../30-configuration/controller.md)
 
 #### Example Controller Edge Configuration Section
 

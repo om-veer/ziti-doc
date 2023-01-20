@@ -23,4 +23,7 @@ _remotes
 remotes
 all/docs/_remotes
 ziti
-static/docs/reference/developer/api
+static/docs/reference/sdk/clang
+static/docs/reference/sdk/swift
+static/docs/reference/sdk/csharp
+

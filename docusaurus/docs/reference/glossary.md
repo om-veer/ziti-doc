@@ -1,6 +1,7 @@
 ---
 id: glossary
 title: Glossary
+sidebar_position: 95
 ---
 import ERPBrief from '../learn/core-concepts/security/authorization/policies/_edge-router-policy-brief.md'
 import SERPBrief from '../learn/core-concepts/security/authorization/policies/_service-edge-router-policy-brief.md'

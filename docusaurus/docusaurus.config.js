@@ -53,8 +53,8 @@ const config = {
               path.replace("/docs/guides/","/docs/manage/"),
             ];
           }
-          if ( path.startsWith("/docs/reference/developer/api") ) {
-            return [path.replace("/docs/reference/developer/api","/api/")];
+          if ( path.startsWith("/docs/reference/api") ) {
+            return [path.replace("/docs/reference/api","/api/")];
           }
           if ( path.startsWith("/docs/reference/configuration/") ) {
             return [path.replace("/docs/reference/configuration/","/operations/configuration/")];
